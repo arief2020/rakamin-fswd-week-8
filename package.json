@@ -1,0 +1,15 @@
+{
+  "name": "wekk8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "nodemon": "^3.1.0",
+    "pg": "^8.11.3"
+  }
+}

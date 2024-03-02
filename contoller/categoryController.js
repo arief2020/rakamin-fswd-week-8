@@ -18,7 +18,7 @@ class Category {
                 throw err
             }
             if (result.rows.length === 0) {
-                return res.status(404).json({message: "film id not found"})
+                return res.status(404).json({error: "category not found"})
             }
             return res.status(200).json(result.rows)
         })

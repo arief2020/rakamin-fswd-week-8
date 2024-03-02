@@ -3,7 +3,7 @@ const pool = require("../query")
 class Film {
     static async getAll(req, res) {
         const category = req.query.category;
-        let queries = 'SELECT * FROM film ORDER BY film_id ASC'
+        let queries = `SELECT * FROM film ORDER BY film_id ASC`
         if (!category) {
             console.log("category is empty")
         } else {
@@ -33,7 +33,7 @@ class Film {
                 throw err
             }
             if (result.rows.length === 0) {
-                return res.status(404).json({message: "film id not found"})
+                return res.status(404).json({message: "film not found"})
             }
             return res.status(200).json(result.rows)
         })
@@ -55,7 +55,7 @@ class Film {
                 throw err
             }
             if (result.rows.length === 0) {
-                return res.status(404).json({message: "Category id not found"})
+                return res.status(404).json({message: "category for this film not found"})
             } 
             return res.status(200).json(result.rows)
         })
